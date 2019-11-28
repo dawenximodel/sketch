@@ -189,7 +189,7 @@ module.exports = (env, argv) => {
 		plugins: [
 			new webpack.NoEmitOnErrorsPlugin(),
 			new HtmlWebpackPlugin({
-				title: '项目标题',
+				title: 'SKETCH',
 				template: './index.ejs',
 				minify: { collapseWhitespace: true },
 				favicon: './favicon.ico'
