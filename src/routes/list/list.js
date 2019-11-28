@@ -17,14 +17,15 @@ const isMB = !!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|A
 let sourcedata = [];
 
 class List extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			shuffle: false,
-			size: 5
+			size: this.props.pagesize
 		};
 		this.selected = [];
 		this.historySelected = [];
+		this.historyListLength = this.props.currentList.length;
 	}
 
 	componentDidMount () {
@@ -82,7 +83,11 @@ class List extends Component {
 					this.shuffleArray(res);
 				}
 			})
-			.then(() => this.setCurrentListByPage())
+			.then(() => {
+				let size = this.historyListLength > this.state.size ? this.historyListLength : this.state.size;
+
+				return this.setCurrentListByPage(size);
+			})
 			.then(() => Loading.hide());
 	}
 
@@ -96,11 +101,12 @@ class List extends Component {
 		return JSON.parse(JSON.stringify(data));
 	}
 
-	setCurrentListByPage = () => {
+	setCurrentListByPage = (number) => {
+		const pagesize =  number || this.state.size;
 		const { page } = this.props;
 		const operationData = this.deeplyCopy(this.props.sourceList);
 		this.props.setStore({
-			currentList: this.props.currentList.concat(operationData.slice((page-1) * this.state.size, page * this.state.size))
+			currentList: this.props.currentList.concat(operationData.slice((page-1) * pagesize, page * pagesize))
 		});
 	}
 

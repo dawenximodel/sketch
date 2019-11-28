@@ -25,7 +25,6 @@ class View extends Component {
 		this.state = {
 			sliderData: [],
 			direction: 0, // -1上一个，1下一个，0
-			sliderNum: 5,
 			currectPage: 0,
 			resetTimer: false,
 			timeStore: this.props.time
