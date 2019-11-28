@@ -1,0 +1,1 @@
+export const baseUrl = __DEV__ ?  '' : 'https://dawenximodel.github.io';

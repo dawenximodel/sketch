@@ -1,0 +1,109 @@
+.root {
+    background: #1e1e1e;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.pages {
+    position: absolute;
+    height: 100%;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: table;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: inherit;
+    height: inherit;
+}
+
+.timer {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+}
+
+.lh3 {
+	line-height: 2.5rem;
+	color: #aaa;
+}
+
+.tag {
+    position: absolute;
+    right: 1rem;
+    bottom: 38px;
+    color: #666;
+}
+
+.loading {
+    color: #666;
+}
+
+.absolute {
+    position: absolute;
+}
+
+
+.backhome {
+	position: absolute;
+	z-index: 10;
+	padding: 0.5rem;
+	border-radius: 1.2rem;
+	border: none;
+	color: $gray;
+	top: 0.5rem;
+	left: 0.5rem;
+	height: 1.2rem;
+	width: 1.2rem;
+}
+
+.pic {
+	position: absolute;
+	z-index: 10;
+	padding: 0.5rem;
+	border-radius: 1.2rem;
+	border: none;
+	color: $gray;
+	top: 0.5rem;
+	right: 0.5rem;
+	height: 1.2rem;
+    width: 1.2rem;
+    max-width: 100%;
+    max-height: 100x;
+}
+
+.nav {
+	width: 100%;
+}
+.nav i{
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	margin-top: -15px;
+	width: 30px;
+	font-size: 20px;
+	line-height: 20px;
+	height: 30px;
+	color: #aaa;
+}
+
+.navright{
+	right: 15px;
+}
+
+.navleft{
+	left: 15px;
+}
