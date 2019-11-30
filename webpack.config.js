@@ -192,7 +192,7 @@ module.exports = (env, argv) => {
 				title: 'SKETCH',
 				template: './index.ejs',
 				minify: { collapseWhitespace: true },
-				favicon: './favicon.ico'
+				favicon: './assets/favicon.ico'
 			}),
 			new MiniCssExtractPlugin({
 				// Options similar to the same options in webpackOptions.output
