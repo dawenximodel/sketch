@@ -9,6 +9,11 @@ export default function(source, projectname){
 			models = `${baseUrl}/md2/index.json`;
 			imageUrl = `${baseUrl}/md2`;
 			break;
+		case 'models-md3':
+			modelsIndex = `${baseUrl}/md3/modelsIndex.json`;
+			models = `${baseUrl}/md3/index.json`;
+			imageUrl = `${baseUrl}/md3`;
+			break;
 		default:
 			break;
 	}
