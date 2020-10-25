@@ -1,1 +1,1 @@
-- 
+- src/core/getPath.js
